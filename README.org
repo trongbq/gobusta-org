@@ -6,7 +6,7 @@ A minimal static blog engine with org-mode support
 - Supports blogging, RSS, tags.
 
 *** Structure
-- ~cmd/main.go~ is the engine which take list of posts and render them into HTML
+- ~main.go~ is the engine which take list of posts and render them into HTML
 - ~content~ is where org files stay
 - ~static~ contains static files like CSS or Javascript
 - ~template~ stores different type of templates for web pages, they follows Go template styles which will be used by the engine to render post content.
