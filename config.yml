@@ -1,1 +1,8 @@
-content_dir: content
+content: content
+output: public
+template:
+    directory: templates
+    index: index.html
+    post: post.html
+output_post: posts
+static: static

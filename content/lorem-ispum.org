@@ -1,0 +1,30 @@
+#+TITLE: Lorem Ispum for the good
+#+DATE: <2020-10-14 Wed>
+
+* This is a example for a post
+If you are curious about the Go toolchain, or using a cross-C compiler and wondering about flags passed to the external compiler, or suspicious about a linker bug; use -x to see all the invocations.
+#+BEGIN_SRC
+$ go build -x
+WORK=/var/folders/00/1b8h8000h01000cxqpysvccm005d21/T/go-build600909754
+mkdir -p $WORK/hello/perf/_obj/
+mkdir -p $WORK/hello/perf/_obj/exe/
+cd /Users/jbd/src/hello/perf
+/Users/jbd/go/pkg/tool/darwin_amd64/compile -o $WORK/hello/perf.a -trimpath $WORK -p main -complete -buildid bbf8e880e7dd4114f42a7f57717f9ea5cc1dd18d -D _/Users/jbd/src/hello/perf -I $WORK -pack ./perf.go
+cd .
+/Users/jbd/go/pkg/tool/darwin_amd64/link -o $WORK/hello/perf/_obj/exe/a.out -L $WORK -extld=clang -buildmode=exe -buildid=bbf8e880e7dd4114f42a7f57717f9ea5cc1dd18d $WORK/hello/perf.a
+mv $WORK/hello/perf/_obj/exe/a.out perf
+#+END_SRC
+
+* Some Go sample
+#+BEGIN_SRC go
+package main
+
+func main() {
+
+}
+#+END_SRC
+
+* Conclusion
+I barely understand how org-mode works but it's changing my life. I want to be able to write everything in this, so while there are a few things still need to be worked out I think I'll be able to write a lot more often.
+
+Being able to collapse the headings using tab and navigate through sections using ~c-c c-p~ and /c-c c-n/ makes nimble the process of organizing tasks. fully recommend
